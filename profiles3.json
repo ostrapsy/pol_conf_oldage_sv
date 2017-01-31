@@ -6,7 +6,7 @@ window.others3 = {
       {
         "avatar": "avatars/others/anca.png",
         "username": "AncaD",
-	"userage": "29",
+	"userage": "39",
 	"usergender": "female",
 	"userpolitic": "cooking, technology and reading",
 	"shownlikes": "5",
@@ -16,7 +16,7 @@ window.others3 = {
       {
         "avatar": "avatars/others/sarah.png",
         "username": "Sarah",
-	"userage": "32",
+	"userage": "62",
 	"usergender": "female",
 	"userpolitic": "music, physical exercise and socializing",
 	"shownlikes": "5",
@@ -26,7 +26,7 @@ window.others3 = {
       {
         "avatar": "avatars/others/arjen.png",
         "username": "Arjen",
-	"userage": "26",
+	"userage": "37",
 	"usergender": "male",
 	"userpolitic": "technology, reading and gaming",
 	"shownlikes": "3",
@@ -36,7 +36,7 @@ window.others3 = {
       {
         "avatar": "avatars/others/jane.png",
         "username": "Jane",
-	"userage": "36",
+	"userage": "46",
 	"usergender": "female",
 	"userpolitic": "physical exercise, reading and socializing",
 	"shownlikes": "4",
