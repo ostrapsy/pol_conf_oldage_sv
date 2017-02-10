@@ -53,7 +53,7 @@ $(function() {
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
-    settings.likes_by = ['George','AncaD','Sarah','Arjen','Jane','Nick','Dan','Heather','Ky'];
+    settings.likes_by = ['David','AncaD','Sarah','Arjen','Marie','Nick','Dan','Heather','Ky'];
     //settings.likes_by_after = ['AncaD','Sarah','Jane','Nick','Dan','Heather','Ky'];
   }
   
@@ -107,31 +107,31 @@ $(function() {
 	  var tpl = $('#newtmp2').html(),html = Mustache.to_html(tpl, others3);
 	  $("#profiles2").append(html);
 	  $(window).unbind('beforeunload');
-	  var names = ['Arjen','AncaD','Sarah','Jane',];
+	  var names = ['Arjen','AncaD','Sarah','Marie',];
 	  //var times = [6000,12000,19000,28000];
 	  var times = [15000,21000,28000,39000];
 	  //var antal = 4;
 	  //var index = 0;
 	  
 	   if (window.condition == 1) {
-	  	var themsg1 = names[0] + " clicked on George's link";
+	  	var themsg1 = names[0] + " klickade på Davids länk";
 	  	setTimeout(function(hej) {
   				alertify.success(themsg1)
   			}, times[0]);
-	  	var themsg2 = names[1] + " clicked on George's link";
+	  	var themsg2 = names[1] + " klickade på Davids länk";
 	  	setTimeout(function(nej) {
   				alertify.success(themsg2)
   			}, times[1]);
-	  	var themsg3 = names[2] + " clicked on George's link";
+	  	var themsg3 = names[2] + " klickade på Davids länk";
 	  	setTimeout(function(va) {
   				alertify.success(themsg3)
   			}, times[2]);
-	  	var themsg4 = names[3] + " clicked on George's link";
+	  	var themsg4 = names[3] + " klickade på Davids länk";
 	  	setTimeout(function(vem) {
   				alertify.success(themsg4)
   			}, times[3]);
   	  } else if (window.condition == 2) {
-		var themsg1 = names[2] + " clicked on George's link";
+		var themsg1 = names[2] + " klickade på Davids länk";
 	  	setTimeout(function(hej) {
   				alertify.success(themsg1)
   			}, times[2]);
@@ -172,12 +172,12 @@ $(function() {
 
   		if(uname == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = 'Var god ange ett användarnamn';
   			uname = "undefined";
   		}
   		if(not_alphanumeric(uname)) {
   			error = 1;
-  			errormsg = 'Please only letters (and no spaces)';
+  			errormsg = 'Endast bokstäver (och inga mellanslag)';
   		}  		
 
   		if(error == 0) {
@@ -231,13 +231,13 @@ $(function() {
 			if (values.length == 1) {
 				var upolitic = values[0];
 			} else if (values.length == 2) {
-				var upolitic = values[0] + " and " + values[1];
+				var upolitic = values[0] + " och " + values[1];
 			} else if (values.length == 3) {
-				var upolitic = values[0] + ", " + values[1] + " and " + values[2];
+				var upolitic = values[0] + ", " + values[1] + " och " + values[2];
 			}
 		} else if($("input[name=inter]:checked").length < min) {
 			error = 1;
-			errormsg = 'Please state at least one interest';
+			errormsg = 'Var god ange minst ett intresse';
 			upolitic ='undefined';
 		}
 		
@@ -245,17 +245,17 @@ $(function() {
 		   var ugender = $('input[name="gender"]:checked').val();
 		} else if($('input[name="gender"]:checked').val() == null) {
 			error = 1;
-			errormsg = 'Please state your gender';
+			errormsg = 'Var god ange ditt kön';
 			ugender ='undefined';
 		}
 
   		if(uage == "") {
   			error = 1;
-  			errormsg = 'Please enter your age';
+  			errormsg = 'Var god ange din ålder';
   			uage = "undefined";
   		} else if(isNaN(uage)) {
   			error = 1;
-  			errormsg = 'Please enter your age using numbers only';
+  			errormsg = 'Var god ange din ålder i siffror';
   		}  
 
   		if(error == 0) {
@@ -295,7 +295,7 @@ $(function() {
   			window.avatarexport = /avatar_([^\s]+)/.exec(window.avatar)[1];
     			init_text();  			
     		} else {
-    			alertify.log("Please select an avatar","error");
+    			alertify.log("Var god välj en avatar","error");
     		}
     	});
 
@@ -307,7 +307,7 @@ $(function() {
   	$('#text').show();
 
   	$("#description").keyup(function(){
-  	  $("#count").text("Characters left: " + (400 - $(this).val().length));
+  	  $("#count").text("Återstående tecken: " + (400 - $(this).val().length));
   	});
 
   	$('#submit_text').on('click',function() {
@@ -315,17 +315,17 @@ $(function() {
   		var error = 0;
   		if($('#description').val() == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = 'Var god skriv en introducerande text';
   		}
   		if($('#description').val() !== "" && $('#description').val().length < 140) {
 		
   			error = 1;
-  			errormsg = 'Please write a bit more';
+  			errormsg = 'Var god skriv lite mer';
 			}
   		if($('#description').val().length > 401) {
   		
   			error = 1;
-  			errormsg = 'Please enter less text';
+  			errormsg = 'Var god skriv lite mindre';
   		}  		
   		if(error == 0) {
   			$('#text').hide();
@@ -433,7 +433,7 @@ $(function() {
   		{ 
   			times[i] = +times[i]; 
   			
-  			themsg = usernames[i] + " showed interest in your profile";
+  			themsg = usernames[i] + " gillade din profil";
 
   			setTimeout(function(themsg) {
   				that.text(parseInt(that.text()) + 1);
